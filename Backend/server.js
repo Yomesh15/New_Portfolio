@@ -1,7 +1,7 @@
 import express from "express";
 import dotenv from "dotenv";
 import connectDB from "./src/ConnectDB/connectdb.js";
-import contactRoutes from "./src/Routes/contact.route.js"; // fixed path
+import contactRoutes from "./src/Routes/contact.route.js";
 import cors from "cors";
 
 dotenv.config();
@@ -9,22 +9,20 @@ connectDB();
 
 const app = express();
 
-// Enable CORS
+
 app.use(cors({
-    origin: "http://localhost:5173", 
-    methods: ["GET", "POST"],
-    credentials: true
+  origin: "*",
+  methods: ["GET", "POST"],
+  credentials: true
 }));
 
 app.use(express.json());
 app.use("/api", contactRoutes);
 
-const PORT = process.env.PORT || 2006;
+// Test route
 app.get("/", (req, res) => {
-    res.send("Hello from express server");
+  res.send("Hello from Express server on Vercel!");
 });
 
 
-export default app;   
-
-
+export default app;
