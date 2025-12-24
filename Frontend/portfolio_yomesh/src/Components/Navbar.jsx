@@ -35,19 +35,19 @@ const Navbar = () => {
         </li>
 
         <li>
-          <a href="/projects" className="link">
+          <a href="#projects" className="link">
             <FiGithub /> <span>Projects</span>
           </a>
         </li>
 
         <li>
-          <a href="/skills" className="link">
+          <a href="#skills" className="link">
             <FaTools /> <span>Skills</span>
           </a>
         </li>
 
         <li>
-          <a href="/contact" className="link">
+          <a href="#contact" className="link">
             <IoCall /> <span>Contact</span>
           </a>
         </li>
