@@ -1,7 +1,7 @@
 import React from "react";
 import { FiGithub, FiExternalLink } from "react-icons/fi";
-import sdcafeproject from "../Assets/sdcafeproject.png";
-import quizproject from "../Assets/quizproject.png";
+import sdcafeproject from "../assets/sdcafeproject.png";
+import quizproject from "../assets/quizproject.png";
 
 const Projects = () => {
   return (
