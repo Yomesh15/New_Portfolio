@@ -16,12 +16,14 @@ app.use("/api", contactRoutes);
 
 
 app.get("/", async (req, res) => {
-  try {
-    await connectDB(); 
-    res.send("Backend running with DB!");
-  } catch (err) {
-    res.status(500).send("Database connection failed");
-  }
+    try {
+        await connectDB();
+        res.send("Backend running with DB on Vercel!");
+    } catch (err) {
+        console.error(err);
+        res.status(500).send("Database connection failedd");
+    }
 });
+
 
 export default app;
