@@ -1,4 +1,4 @@
-import Contact from "../models/contact.model.js";
+import Contact from "../Models/contact.model.js";
 
 export const sendContact = async (req, res) => {
   try {
@@ -23,7 +23,7 @@ export const sendContact = async (req, res) => {
       message: "Contact form submitted successfully",
       data: contact,
     });
-    
+
   } catch (error) {
     console.error("Contact Error:", error);
     return res.status(500).json({
