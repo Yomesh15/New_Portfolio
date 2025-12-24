@@ -24,7 +24,7 @@ app.get("/", (req, res) => {
     res.send("Hello from express server");
 });
 
-app.listen(PORT, () => {
-    console.log(`Server is running on http://localhost:${PORT}`);
-});
+
+export default app;   
+
 
