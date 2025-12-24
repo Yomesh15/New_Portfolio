@@ -8,25 +8,22 @@ dotenv.config();
 
 const app = express();
 
-// Middleware
 app.use(cors({ origin: "*" }));
+
 app.use(express.json());
+
 app.use("/api", contactRoutes);
 
-app.get("/", (req, res) => {
-    res.send("Backend running!");
+
+app.get("/", async (req, res) => {
+    try {
+        await connectDB();
+        res.send("Backend running with DB on Vercel!");
+    } catch (err) {
+        console.error(err);
+        res.status(500).send("Database connection failedd");
+    }
 });
 
-// Start server and connect to DB
-const startServer = async () => {
-    try {
-        await connectDB();  // Connect once here
-        const PORT = process.env.PORT || 2006;
-        app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
-    } catch (err) {
-        console.error("Database connection failed", err);
-        process.exit(1);
-    }
-};
 
-startServer();
+export default app;
