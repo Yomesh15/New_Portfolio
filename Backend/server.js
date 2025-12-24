@@ -5,24 +5,23 @@ import contactRoutes from "./src/Routes/contact.route.js";
 import cors from "cors";
 
 dotenv.config();
-connectDB();
 
 const app = express();
 
-
-app.use(cors({
-  origin: "*",
-  methods: ["GET", "POST"],
-  credentials: true
-}));
+app.use(cors({ origin: "*" }));
 
 app.use(express.json());
+
 app.use("/api", contactRoutes);
 
-// Test route
-app.get("/", (req, res) => {
-  res.send("Hello from Express server on Vercel!");
-});
 
+app.get("/", async (req, res) => {
+  try {
+    await connectDB(); 
+    res.send("Backend running with DB!");
+  } catch (err) {
+    res.status(500).send("Database connection failed");
+  }
+});
 
 export default app;
