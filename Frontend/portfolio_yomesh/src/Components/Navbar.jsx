@@ -29,27 +29,27 @@ const Navbar = () => {
       {/* Navigation Links */}
       <ul className={`nav-links ${isMobileOpen ? "open" : ""}`}>
         <li>
-          <a href="/" className="link">
+          <Link href="/" className="link">
             <AiOutlineHome /> <span>Home</span>
-          </a>
+          </Link>
         </li>
 
         <li>
-          <a href="#projects" className="link">
+          <Link to="/projects" className="link">
             <FiGithub /> <span>Projects</span>
-          </a>
+          </Link>
         </li>
 
         <li>
-          <a href="#skills" className="link">
+          <Link to="/skills" className="link">
             <FaTools /> <span>Skills</span>
-          </a>
+          </Link>
         </li>
 
         <li>
-          <a href="#contact" className="link">
+          <Link to="/contact" className="link">
             <IoCall /> <span>Contact</span>
-          </a>
+          </Link>
         </li>
 
       </ul>
