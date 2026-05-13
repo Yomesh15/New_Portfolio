@@ -112,7 +112,7 @@ const Hero = () => {
 
         <div className="hero-buttons">
           <a
-            href="https://sd-cafe-restaurant.vercel.app/"
+            href="https://velora-self-sigma.vercel.app/"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-primary"

@@ -5,7 +5,7 @@ import { FiGithub } from "react-icons/fi";
 import { FaTools } from "react-icons/fa";
 import { IoCall } from "react-icons/io5";
 import { IoMdColorPalette } from "react-icons/io";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import resume from "../assets/Yomesh_Nagar_Resume.pdf";
 import { BsDownload } from "react-icons/bs";
@@ -16,46 +16,49 @@ const Navbar = () => {
 
   const toggleMobileMenu = () => setIsMobileOpen(!isMobileOpen);
 
-  return (
-    <nav className="navcontainer">
-      {/* Logo */}
-      <img src={navyomesh} alt="Yomesh" className="nav-logo" />
+  const scrolltotop  = () =>{
+    window.scrollTo({top:0, behavior:'smooth'})
+  }
+  const navigate = useNavigate()
 
-      {/* Hamburger (mobile only) */}
+  return (
+    <nav className="navcontainer"> 
+      <img src={navyomesh} alt="Yomesh" className="nav-logo" onClick={() =>{
+        scrolltotop();
+        navigate("/")
+      }}/>
+ 
       <div className="hamburger" onClick={toggleMobileMenu}>
         <GiHamburgerMenu size={28} />
       </div>
-
-      {/* Navigation Links */}
+ 
       <ul className={`nav-links ${isMobileOpen ? "open" : ""}`}>
         <li>
-          <Link href="/" className="link">
+          <Link href="/" className="link" onClick={()=> scrolltotop()}>
             <AiOutlineHome /> <span>Home</span>
           </Link>
         </li>
 
         <li>
-          <Link to="/projects" className="link">
+          <Link to="/projects" className="link" onClick={()=> scrolltotop()}>
             <FiGithub /> <span>Projects</span>
           </Link>
         </li>
 
         <li>
-          <Link to="/skills" className="link">
+          <Link to="/skills" className="link" onClick={()=> scrolltotop()}>
             <FaTools /> <span>Skills</span>
           </Link>
         </li>
 
         <li>
-          <Link to="/contact" className="link">
+          <Link to="/contact" className="link" onClick={()=> scrolltotop()}>
             <IoCall /> <span>Contact</span>
           </Link>
         </li>
 
       </ul>
 
-
-      {/* Resume Button */}
       <button
         className="resumedownload"
         onClick={() => {

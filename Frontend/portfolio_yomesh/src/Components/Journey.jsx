@@ -28,8 +28,7 @@ const Journey = () => {
     return (
         <section className="about-section reveal">
             <div className="about-container">
-
-                {/* Heading */}
+ 
                 <div className="about-heading">
                     <span className="subtitle">DISCOVER MY JOURNEY</span>
                     <h2>About Me</h2>
@@ -38,9 +37,7 @@ const Journey = () => {
 
                 {/* Main Content */}
                 <div className="about-content">
-
-                    {/* Left Card */}
-                    {/* Left Card */}
+ 
                     <div className="profile-card">
                         <img src={humanphoto} alt="Yomesh Nagar" />
 
@@ -50,9 +47,9 @@ const Journey = () => {
                                 <FaReact />
                             </div>
 
-                            {/* <div className="icon node">
+                            <div className="icon node">
                                 <FaNodeJs />
-                            </div> */}
+                            </div>
 
                             {/* <div className="icon mongo">
                                 <SiMongodb />

@@ -1,6 +1,6 @@
 import React from "react";
 import { FiGithub, FiExternalLink } from "react-icons/fi";
-import sdcafeproject from "../assets/sdcafeproject.png";
+import Velora from "../assets/velora.png";
 import quizproject from "../assets/quizproject.png";
 
 const Projects = () => {
@@ -20,33 +20,34 @@ const Projects = () => {
           {/* project 1 */}
           <div className="project-card">
             <img
-              src={sdcafeproject}
-              alt="SD Cafe Website"
+              src={Velora}
+              alt="Velora"
             />
 
             <div className="project-content">
-              <h3>SD Cafe Restaurant</h3>
+              <h3>Velora</h3>
               <p>
-                A modern, responsive restaurant website built using React,
-                featuring menu sections and smooth UI interactions.
+                Velora is a modern MERN-stack ecommerce web application designed to deliver a seamless and stylish online shopping experience. It features responsive UI, secure authentication, product browsing, cart management, and smooth user interactions with a clean and premium design approach.
               </p>
 
               <div className="project-tech">
                 <span>React</span>
+                <span>Nodejs</span>
                 <span>CSS</span>
                 <span>Vercel</span>
+                <span>Render</span>
               </div>
 
               <div className="project-links">
                 <a
-                  href="https://sd-cafe-restaurant.vercel.app/"
+                  href="https://velora-self-sigma.vercel.app/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   Live <FiExternalLink />
                 </a>
                 <a
-                  href="https://github.com/Yomesh15/SD-Cafe-Restaurant"
+                  href="https://github.com/Yomesh15/Velora"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -56,7 +57,7 @@ const Projects = () => {
             </div>
           </div>
 
-          {/* Project 2 */}
+          {/* Projectt 2 */}
           <div className="project-card">
             <img
               src={quizproject}

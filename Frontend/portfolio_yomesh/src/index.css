@@ -83,6 +83,8 @@ body {
   display: flex;
   align-items: center;
   gap: 10px;
+  position: relative;
+  left: 44px;
   list-style: none;
   transition: all 0.3s ease;
 }
@@ -654,6 +656,7 @@ svg {
   color: #61dafb;
 }
 
+
 .node svg {
   color: #68a063;
 }
@@ -670,7 +673,7 @@ svg {
 .react {
   top: 624px;
   /* top: 1768px; */
-  left: 378px;
+  left: 374px;
   background-color: black;
   animation: zigzagRotate 6s ease-in-out infinite;
   animation-delay: 0.8s;
@@ -1285,8 +1288,7 @@ svg {
 
 
 
-
-/* contact css  */
+/* CONTACT SECTION */
 .contact-section {
   padding: 100px 20px;
   background: radial-gradient(circle at top, #2b163f, #0b0b0f 60%);
@@ -1321,6 +1323,7 @@ svg {
   font-size: 16px;
 }
 
+/* CARD */
 .contact-card {
   margin-top: 50px;
   padding: 40px;
@@ -1335,9 +1338,10 @@ svg {
   margin-bottom: 30px;
 }
 
+/* SOCIAL LINKS */
 .social-links {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 16px;
 }
 
@@ -1366,6 +1370,17 @@ svg {
   color: #fff;
 }
 
+/* WHATSAPP */
+.whatsapp-box:hover {
+  border-color: #25D366;
+  box-shadow: 0 0 18px rgba(37, 211, 102, 0.5);
+}
+
+.whatsapp-box svg {
+  color: #25D366;
+}
+
+/* EMAIL */
 .email-box {
   margin: 30px auto 10px;
   max-width: 420px;
@@ -1386,8 +1401,74 @@ svg {
   color: #9fa0b5;
 }
 
+/* CONTACT FORM */
+.sendcontact {
+  max-width: 700px;
+  margin: 70px auto 0;
+  background: linear-gradient(145deg, #16161d, #0f0f14);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 0 40px rgba(155, 92, 255, 0.15);
+}
+
+.sendcontact h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 36px;
+  background: linear-gradient(90deg, #d58cff, #9b5cff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.sendcontact form {
+  padding-left: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sendcontact input,
+.sendcontact textarea {
+  width: 92%;
+  padding: 15px;
+  border-radius: 12px;
+  border: 1px solid #2d2d3a;
+  background: #111118;
+  color: white;
+  font-size: 15px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.sendcontact input:focus,
+.sendcontact textarea:focus {
+  border-color: #9b5cff;
+  box-shadow: 0 0 10px rgba(155, 92, 255, 0.4);
+}
+
+.sendcontact textarea {
+  resize: none;
+}
+
+.sendcontact button {
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(90deg, #9b5cff, #c77dff);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.sendcontact button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 20px rgba(155, 92, 255, 0.5);
+}
+
 /* RESPONSIVE */
 @media (max-width: 768px) {
+
   .contact-title {
     font-size: 38px;
   }
@@ -1398,6 +1479,43 @@ svg {
 
   .contact-card {
     padding: 30px 20px;
+  }
+
+  .sendcontact {
+    padding: 30px 20px;
+  }
+
+  .sendcontact h2 {
+    font-size: 30px;
+  }
+
+  .email-box {
+    flex-direction: column;
+    text-align: center;
+    word-break: break-word;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .contact-title {
+    font-size: 32px;
+  }
+
+  .social-links {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-text {
+    font-size: 14px;
+  }
+
+  .contact-desc {
+    font-size: 14px;
+  }
+
+  .sendcontact button {
+    width: 100%;
   }
 }
 
