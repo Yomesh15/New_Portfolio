@@ -35,11 +35,12 @@ const Projects = () => {
               </div>
 
               <div className="project-footer">
-                <div className="project-tech">
+                <div className="project-tech" style={{ paddingBottom: "14px" }}>
                   <span>React</span>
                   <span>Node.js</span>
                   <span>CSS</span>
                   <span>Vercel</span>
+                  <span>AOS</span>
                   <span>Render</span>
                 </div>
 
