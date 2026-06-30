@@ -1637,14 +1637,6 @@ svg {
   line-height: 1.6;
 }
 
-.project-tech1 {
-  margin: 16px 0;
-  display: flex;
-  flex-wrap: wrap;
-  position: relative;
-  top: -51px;
-  gap: 10px;
-}
 .project-tech {
   margin: 16px 0;
   display: flex;
@@ -1652,13 +1644,6 @@ svg {
   gap: 10px;
 }
 
-.project-tech1 span {
-  font-size: 12px;
-  padding: 6px 12px;
-  border-radius: 20px;
-  background: #1f1f2b;
-  color: #d6d6f0;
-}
 .project-tech span {
   font-size: 12px;
   padding: 6px 12px;
