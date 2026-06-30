@@ -35,7 +35,7 @@ const Projects = () => {
               </div>
 
               <div className="project-footer">
-                <div className="project-tech1">
+                <div className="project-tech">
                   <span>React</span>
                   <span>Node.js</span>
                   <span>CSS</span>
