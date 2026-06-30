@@ -14,45 +14,61 @@ import { GiHamburgerMenu } from "react-icons/gi";
 const Navbar = () => {
   const [isMobileOpen, setIsMobileOpen] = useState(false);
 
+  const onclickoutside = () => {
+    document.addEventListener('click', setIsMobileOpen(false))
+  }
+
   const toggleMobileMenu = () => setIsMobileOpen(!isMobileOpen);
 
-  const scrolltotop  = () =>{
-    window.scrollTo({top:0, behavior:'smooth'})
+  const scrolltotop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
   }
   const navigate = useNavigate()
 
   return (
-    <nav className="navcontainer"> 
-      <img src={navyomesh} alt="Yomesh" className="nav-logo" onClick={() =>{
+    <nav className="navcontainer">
+      <img src={navyomesh} alt="Yomesh" className="nav-logo" onClick={() => {
         scrolltotop();
         navigate("/")
-      }}/>
- 
+      }} />
+
       <div className="hamburger" onClick={toggleMobileMenu}>
         <GiHamburgerMenu size={28} />
       </div>
- 
+
       <ul className={`nav-links ${isMobileOpen ? "open" : ""}`}>
         <li>
-          <Link href="/" className="link" onClick={()=> scrolltotop()}>
+          <Link href="/" className="link" onClick={() => {
+            scrolltotop()
+            onclickoutside()
+          }}>
             <AiOutlineHome /> <span>Home</span>
           </Link>
         </li>
 
         <li>
-          <Link to="/projects" className="link" onClick={()=> scrolltotop()}>
+          <Link to="/projects" className="link" onClick={() => {
+            scrolltotop()
+            onclickoutside()
+          }}>
             <FiGithub /> <span>Projects</span>
           </Link>
         </li>
 
         <li>
-          <Link to="/skills" className="link" onClick={()=> scrolltotop()}>
+          <Link to="/skills" className="link" onClick={() => {
+            scrolltotop()
+            onclickoutside()
+          }}>
             <FaTools /> <span>Skills</span>
           </Link>
         </li>
 
         <li>
-          <Link to="/contact" className="link" onClick={()=> scrolltotop()}>
+          <Link to="/contact" className="link" onClick={() => {
+            scrolltotop()
+            onclickoutside()
+          }}>
             <IoCall /> <span>Contact</span>
           </Link>
         </li>

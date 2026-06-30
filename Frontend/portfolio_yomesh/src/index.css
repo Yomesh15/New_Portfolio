@@ -1590,8 +1590,26 @@ svg {
   overflow: hidden;
   transition: all 0.4s ease;
   box-shadow: 0 0 30px rgba(155, 92, 255, 0.32);
+  display: flex;
+  flex-direction: column;
 }
 
+.project-content {
+  padding: 24px;
+  text-align: left;
+
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.project-info {
+  flex: 1;
+}
+
+.project-footer {
+  margin-top: auto;
+}
 .project-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 0 45px rgba(155, 92, 255, 0.35);
@@ -1619,6 +1637,14 @@ svg {
   line-height: 1.6;
 }
 
+.project-tech1 {
+  margin: 16px 0;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  top: -51px;
+  gap: 10px;
+}
 .project-tech {
   margin: 16px 0;
   display: flex;
@@ -1626,6 +1652,13 @@ svg {
   gap: 10px;
 }
 
+.project-tech1 span {
+  font-size: 12px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  background: #1f1f2b;
+  color: #d6d6f0;
+}
 .project-tech span {
   font-size: 12px;
   padding: 6px 12px;

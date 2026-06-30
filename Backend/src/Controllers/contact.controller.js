@@ -10,17 +10,18 @@ export const sendContact = async (req, res) => {
         message: "All fields are required",
       });
     }
+    
 
-    // save 
     const contact = await Contact.create({
       name,
       email,
       message,
     });
 
+    
     return res.status(201).json({
       success: true,
-      message: "Contact form submitted successfully",
+      message: "Contact Saved",
       data: contact,
     });
 

@@ -1,7 +1,7 @@
 import React from "react";
 import { FiGithub, FiExternalLink } from "react-icons/fi";
 import Velora from "../assets/velora.png";
-import quizproject from "../assets/quizproject.png";
+import Project2 from "../assets/project2.png";
 
 const Projects = () => {
   return (
@@ -19,40 +19,47 @@ const Projects = () => {
 
           {/* project 1 */}
           <div className="project-card">
-            <img
-              src={Velora}
-              alt="Velora"
-            />
+            <img src={Velora} alt="Velora" />
 
             <div className="project-content">
-              <h3>Velora</h3>
-              <p>
-                Velora is a modern MERN-stack ecommerce web application designed to deliver a seamless and stylish online shopping experience. It features responsive UI, secure authentication, product browsing, cart management, and smooth user interactions with a clean and premium design approach.
-              </p>
+              <div className="project-info">
+                <h3>Velora</h3>
 
-              <div className="project-tech">
-                <span>React</span>
-                <span>Nodejs</span>
-                <span>CSS</span>
-                <span>Vercel</span>
-                <span>Render</span>
+                <p>
+                  Velora is a modern MERN-stack ecommerce web application designed to
+                  deliver a seamless and stylish online shopping experience. It features
+                  responsive UI, secure authentication, product browsing, cart
+                  management, and smooth user interactions with a clean and premium
+                  design approach.
+                </p>
               </div>
 
-              <div className="project-links">
-                <a
-                  href="https://velora-self-sigma.vercel.app/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Live <FiExternalLink />
-                </a>
-                <a
-                  href="https://github.com/Yomesh15/Velora"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  GitHub <FiGithub />
-                </a>
+              <div className="project-footer">
+                <div className="project-tech1">
+                  <span>React</span>
+                  <span>Node.js</span>
+                  <span>CSS</span>
+                  <span>Vercel</span>
+                  <span>Render</span>
+                </div>
+
+                <div className="project-links">
+                  <a
+                    href="https://velora-self-sigma.vercel.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Live <FiExternalLink />
+                  </a>
+
+                  <a
+                    href="https://github.com/Yomesh15/Velora"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    GitHub <FiGithub />
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -60,28 +67,31 @@ const Projects = () => {
           {/* Projectt 2 */}
           <div className="project-card">
             <img
-              src={quizproject}
-              alt="Quiz Game Website"
+              src={Project2}
+              alt="DocVerse"
             />
 
             <div className="project-content">
-              <h3>Quiz Game</h3>
+              <h3>DocVerse</h3>
               <p>
-                Personal quiz game website with animations, responsive layout,
-                and modern dark UI. Which help to boost your Confidence and grow your Knowledge !
+                DocVerse is a full-stack MERN doctor appointment booking platform that enables patients to search for doctors, book appointments, and manage their bookings seamlessly. It includes secure user authentication, real-time appointment management, role-based access for patients and doctors, and a responsive, user-friendly interface for a smooth healthcare booking experience.
               </p>
 
               <div className="project-tech">
                 <span>React</span>
                 <span>CSS</span>
+                <span>Nodejs</span>
+                <span>Vercel</span>
+                <span>MongoDB</span>
+                <span>Render</span>
                 <span>Framer Motion</span>
               </div>
 
               <div className="project-links">
-                <a href="https://yomesh15.github.io/Quiz-Capstone-Project/" target="_blank">
+                <a href="https://doc-verse-gamma.vercel.app/" target="_blank">
                   Live <FiExternalLink />
                 </a>
-                <a href="https://github.com/Yomesh15/Quiz-Capstone-Project/" target="_blank">
+                <a href="https://github.com/Yomesh15/DocVerse" target="_blank">
                   GitHub <FiGithub />
                 </a>
               </div>
